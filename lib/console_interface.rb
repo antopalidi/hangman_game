@@ -24,7 +24,7 @@ class ConsoleInterface
   end
 
   def figure
-    FIGURES[@game.errors_made]
+    FIGURES[@game.errors_made].colorize(:light_yellow)
   end
 
   def word_to_show
