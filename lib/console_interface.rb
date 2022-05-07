@@ -1,4 +1,5 @@
 require_relative 'game'
+require 'colorize'
 
 class ConsoleInterface
   FIGURES =
@@ -10,15 +11,15 @@ class ConsoleInterface
 
   def print_output
     puts <<~INFO
-      Слово: #{word_to_show}
+      #{"Word: #{word_to_show}".colorize(:light_blue)}
       #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
-      У вас осталось ошибок: #{@game.errors_allowed}
+      #{"Errors (#{@game.errors_made}): #{errors_to_show}".colorize(:red)}
+      #{"You have #{@game.errors_allowed} errors left".colorize(:light_green)}
     INFO
     if @game.won?
-      puts 'Congratulations! You  won!'
+      puts 'Congratulations! You  won!'.colorize(:light_green)
     elsif @game.lost?
-      puts "You failed... Mystery word: #{@game.word}"
+      puts "You failed... Mystery word: #{@game.word}".colorize(:light_red)
     end
   end
 
@@ -35,7 +36,7 @@ class ConsoleInterface
   end
 
   def user_input
-    print 'Enter next letter: '
+    print 'Enter next letter: '.colorize(:light_white)
     gets[0].upcase
   end
 end
