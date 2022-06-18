@@ -1,6 +1,6 @@
 # Виселица
 
-[![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)]()
+![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
 Это консольная игра. Вам будет предложено по буквам угадать загаданное программой слово за 7 попыток. Буквы "Ё" и
 "Й" идентичны буквам "Е" и "И" соответственно.
